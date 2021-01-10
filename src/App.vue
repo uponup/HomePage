@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="It works!"/>
+    <vHeader>
+      <HomePage class="homepage" msg="helloword"></HomePage>
+    </vHeader>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import vHeader from "./components/Header.vue";
+import HomePage from "./components/HomePage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    vHeader,
+    HomePage
+  },
+};
 </script>
 
 <style>
@@ -23,6 +26,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.homepage {
+  width: 100%;
+  height: 100%;
+  background-color: beige;
 }
 </style>
