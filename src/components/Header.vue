@@ -4,13 +4,15 @@
       <div class="TalionNav-primary">
         <nav>
           <ul>
-            <li><a href="#/movies" style="color: #fff">三千越甲</a></li>
+            <li><a href="#/" style="color: #fff">三千越甲</a></li>
           </ul>
           <span class="search"></span>
         </nav>
       </div>
     </header>
-    <slot></slot>
+    <div class="content">
+      <slot></slot>
+    </div>
     <footer class="footer">
       <hr />
       <div class="footer_bottom">
@@ -114,12 +116,11 @@ a {
 }
 
 .footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: #383735;
+  width: 100%;
   height: 134px;
+  background-color: #383735;
   font-size: 14px;
   line-height: 1.2em;
   color: #fff;
@@ -178,4 +179,12 @@ hr {
   color: #fff;
   font-size: 19px;
 }
+
+.content {
+  width: 100%;
+  height: 680px;
+  overflow: scroll;
+  background-color: yellow;
+}
+
 </style>
